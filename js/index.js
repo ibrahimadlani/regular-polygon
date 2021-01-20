@@ -33,7 +33,7 @@ function pointConstructor(n) {
 }
 
 var ctx = document.getElementById('chart').getContext('2d');    
-    var chart = new Chart(ctx, {
+var chart = new Chart(ctx, {
         type: 'scatter',
         data: {
             datasets: [{
@@ -49,20 +49,48 @@ var ctx = document.getElementById('chart').getContext('2d');
             scales: {
                 ticks: {display: false},
                 xAxes: [{
-                    gridLines : {
-                        display:false
-                    },
+                    gridLines : {display:false},
                     type: 'linear',
                     position: 'bottom'
-                    
-                }], yAxes: [{
-                    gridLines : {
-                        display:false,
-                    },
+                }],
+                yAxes: [{
+                    gridLines : {display:false,},
                     type: 'linear',
                     position: 'bottom'
-                    
                 }]
             }
         }
     });
+
+function updateChart(n){
+    chart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'i('+n+'π/n)',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132,0.1)',
+                data: pointConstructor(n)
+            }]
+        },
+                    
+        options: {
+            hover: {mode: null},
+            tooltips:false,
+            animation: false,
+            scales: {
+                xAxes: [{
+                    gridLines : {display:false},
+                    type: 'linear',
+                    position: 'bottom'
+                    
+                }],
+                yAxes: [{
+                    gridLines : {display:false},
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            }
+        }
+    });
+}
