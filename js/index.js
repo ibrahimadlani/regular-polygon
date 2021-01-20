@@ -38,8 +38,8 @@ var chart = new Chart(ctx, {
         data: {
             datasets: [{
                 label: 'i(2π/n)',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132,0.1)',
+                backgroundColor: 'rgb(192, 0, 0)',
+                borderColor: ' rgb(100, 0, 0)',
                 data: pointConstructor(10)
             }]
         },
@@ -68,8 +68,8 @@ function updateChart(n){
         data: {
             datasets: [{
                 label: 'i('+n+'π/n)',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132,0.1)',
+                backgroundColor: 'rgb(192, 0, 0)',
+                borderColor: ' rgb(100, 0, 0)',
                 data: pointConstructor(n)
             }]
         },
