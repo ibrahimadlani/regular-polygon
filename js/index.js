@@ -1,4 +1,4 @@
-function polygone(n) {
+function polygon(n) {
     var cos = 1;
     var sin = 0;
 
@@ -20,4 +20,14 @@ function polygone(n) {
         }
     }
     return [listx,listy]
+}
+
+function pointConstructor(n) {
+    var data = []
+
+    for (let i = 0; i < polygon(n)[0].length; i++) {
+        data.push({x:polygon(n)[0][i],y:polygon(n)[1][i]})
+    }
+
+    return data;
 }
