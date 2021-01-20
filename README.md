@@ -1,2 +1,2 @@
 # regular-polygon
-Dynamic displaying of an n-sided regular polygon.
+Dynamic display of an n-sided regular polygon.
